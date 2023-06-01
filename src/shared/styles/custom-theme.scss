@@ -1,0 +1,11 @@
+@import "@angular/material/theming"; //notice that the file imported is also different
+@include mat-core();
+@import "./variables.scss";
+
+$primary: mat-palette($bank-primary, 300);
+$secondary: mat-palette($bank-secondary, 500);
+$tertiary: mat-palette($bank-secondary, 500);
+
+$bv-theme: mat-light-theme($primary, $secondary, $tertiary);
+
+@include angular-material-theme($bv-theme);

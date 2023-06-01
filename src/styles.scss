@@ -1,0 +1,15 @@
+@import "./shared/styles/custom-theme.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.dialog-sucess-error {
+  .mat-mdc-dialog-container,
+  .mat-mdc-dialog-container .mdc-dialog__container,
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 60px 0px 60px 60px;
+  }
+}

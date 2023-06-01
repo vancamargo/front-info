@@ -1,0 +1,19 @@
+@import "./../../styles/variables";
+
+.mat-toolbar.mat-primary {
+  background-color: $color-navbar;
+}
+
+.navbar {
+  max-height: 78px;
+  min-height: 78px;
+}
+
+.logo {
+  margin-top: 8px;
+  align-self: center;
+  flex-grow: 1;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

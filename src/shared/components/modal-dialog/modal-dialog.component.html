@@ -1,0 +1,70 @@
+<mat-toolbar class="navbar" color="primary"> </mat-toolbar>
+
+<div>
+  <h1 mat-dialog-title>{{ btnAction }} Cliente</h1>
+</div>
+<div mat-dialog-content>
+  <form [formGroup]="vehicleForm">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Placa</mat-label>
+      <input matInput placeholder="Placa" formControlName="plate" />
+      <mat-error class="error-msg" *ngIf="vehicleForm.controls['plate'].errors">
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Chassi</mat-label>
+      <input matInput placeholder="Chassi" formControlName="chassi" />
+      <mat-error
+        class="error-msg"
+        *ngIf="vehicleForm.controls['chassi'].errors"
+      >
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Renavam</mat-label>
+      <input matInput placeholder="Renavam" formControlName="renavam" />
+      <mat-error
+        class="error-msg"
+        *ngIf="vehicleForm.controls['renavam'].errors"
+      >
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Modelo</mat-label>
+      <input matInput placeholder="Modelo" formControlName="model" />
+      <mat-error class="error-msg" *ngIf="vehicleForm.controls['model'].errors">
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Marca</mat-label>
+      <input matInput placeholder="Marca" formControlName="brand" />
+      <mat-error class="error-msg" *ngIf="vehicleForm.controls['brand'].errors">
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Ano</mat-label>
+      <input matInput placeholder="Ano" formControlName="year" />
+      <mat-error class="error-msg" *ngIf="vehicleForm.controls['year'].errors">
+        Campo obrigatório
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div class="modal-button" mat-dialog-actions [align]="'end'">
+  <button-primary class="button-close" (click)="closeDialog()"
+    >Fechar</button-primary
+  >
+  <button-primary
+    class="button-save"
+    (click)="save()"
+    [isDisabled]="!vehicleForm.valid"
+    >Salvar</button-primary
+  >
+</div>

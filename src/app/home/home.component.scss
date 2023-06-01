@@ -1,0 +1,80 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.data-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: "Inter";
+  &__title {
+    margin-top: 38px;
+    margin-bottom: -28px;
+  }
+}
+
+th.mat-sort-header {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+td {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+tr {
+  border-radius: 100px;
+}
+.my-row {
+  border-radius: 50px;
+}
+
+.line-row {
+  background-color: #f7f7f7 !important;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 40px 0 0 40px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 40px 40px 0;
+}
+
+span {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  color: #55595d;
+}
+
+.menu {
+  margin-top: 100px;
+  margin-bottom: 37px;
+  display: flex;
+
+  mat-form-field {
+    width: 314px;
+  }
+  &__icon {
+    margin-top: 15px;
+    margin-left: 9px;
+  }
+
+  &__button {
+    margin-left: 48px;
+  }
+}
+
+::ng-deep .mat-sort-header-arrow {
+  color: #fff;
+}

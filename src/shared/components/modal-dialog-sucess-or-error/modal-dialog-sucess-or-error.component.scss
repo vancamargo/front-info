@@ -1,0 +1,21 @@
+@import "src/shared/styles/_variables.scss";
+
+.modal-sucess-error {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-weight: 700;
+    font-size: 12px;
+    color: $color-brand-primary-medium;
+    font-family: "Inter";
+  }
+
+  &__logo {
+    margin-bottom: 70px;
+  }
+  &__button {
+    margin-top: 30px;
+  }
+}

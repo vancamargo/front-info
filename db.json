@@ -1,0 +1,32 @@
+{
+  "vehicleList": [
+    {
+      "plate": "4545",
+      "chassi": "5566",
+      "renavam": "656565",
+      "model": "novo",
+      "brand": "1988",
+      "year": "10",
+      "id": 1
+    },
+    {
+      "plate": "s5454",
+      "chassi": "54584",
+      "renavam": "54454",
+      "model": "5445",
+      "brand": "5454",
+      "year": "5454",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

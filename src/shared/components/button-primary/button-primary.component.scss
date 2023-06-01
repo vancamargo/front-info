@@ -1,0 +1,29 @@
+@import "src/shared/styles/_variables.scss";
+.mat-mdc-raised-button {
+  font-family: "Inter";
+  border-radius: 20px;
+  color: $color-brand-background-write;
+  font-weight: 700;
+}
+
+.sm {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.md {
+  font-size: 14px;
+  line-height: 36px;
+}
+
+.lg {
+  width: 153px;
+  height: 40px;
+  font-size: 10px;
+}
+
+.full {
+  height: 56px;
+  font-size: 16px;
+  width: 100%;
+}
