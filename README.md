@@ -25,4 +25,4 @@ Abra o navegador e acesse a URL http://localhost:4200 para visualizar o projeto.
 
 Para iniciar o servidor JSON:
 
-No terminal, digite: `npx json-server --watch db.json`.
+No terminal, digite: `npx json-server --watch db.json` ou `json-server --watch db.json`.

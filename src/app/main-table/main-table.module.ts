@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './main-table.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarModule } from 'src/shared/components/navbar/navbar.module';
 import { MatTableModule } from '@angular/material/table';
@@ -31,4 +31,4 @@ import { ButtonPrimaryModule } from 'src/shared/components/button-primary/button
   declarations: [HomeComponent],
   exports: [HomeComponent, MatTableModule, MatPaginatorModule, MatSortModule],
 })
-export class HomeModule {}
+export class MainTableModule {}

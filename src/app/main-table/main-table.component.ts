@@ -9,9 +9,9 @@ import { ModalDialogSucessOrErrorComponent } from 'src/shared/components/modal-d
 import { Vehicle } from 'src/shared/models/vehicle.interface';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'main-table',
+  templateUrl: './main-table.component.html',
+  styleUrls: ['./main-table.component.scss'],
 })
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = [

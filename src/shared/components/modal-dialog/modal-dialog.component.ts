@@ -16,10 +16,6 @@ import {
 import { VehicleService } from 'src/app/services/vehicle.service';
 import { ModalDialogSucessOrErrorComponent } from '../modal-dialog-sucess-or-error/modal-dialog-sucess-or-error.component';
 
-import * as moment from 'moment';
-import { MatDatepicker } from '@angular/material/datepicker';
-import { DateAdapter } from '@angular/material/core';
-
 @Component({
   selector: 'modal-dialog',
   templateUrl: './modal-dialog.component.html',
