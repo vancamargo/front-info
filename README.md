@@ -1,4 +1,4 @@
-### Front Bank
+### Front info
 
 Iniciando o projeto
 Para instalar o projeto, siga as instruções abaixo:

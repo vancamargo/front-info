@@ -20,7 +20,7 @@ export class ModalDialogSucessOrErrorComponent implements OnInit {
   caseMessage() {
     switch (this.messagemSucessOrError) {
       case 'sucess':
-        this.messagemModal = 'Cliente adicionado com sucesso';
+        this.messagemModal = 'Veículo adicionado com sucesso';
         break;
       case 'delete':
         this.messagemModal = 'Deletado com sucesso';
@@ -29,7 +29,7 @@ export class ModalDialogSucessOrErrorComponent implements OnInit {
         this.messagemModal = 'Ocorreu um erro ao salvar';
         break;
       case 'edit':
-        this.messagemModal = 'Cliente editado com sucesso';
+        this.messagemModal = 'Veículo editado com sucesso';
         break;
     }
   }

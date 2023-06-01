@@ -1,4 +1,12 @@
-import { Component, Inject, OnInit, inject } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Inject,
+  OnInit,
+  Output,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {
   MatDialogRef,
@@ -6,8 +14,10 @@ import {
   MatDialog,
 } from '@angular/material/dialog';
 import { VehicleService } from 'src/app/services/vehicle.service';
-
 import { ModalDialogSucessOrErrorComponent } from '../modal-dialog-sucess-or-error/modal-dialog-sucess-or-error.component';
+
+import * as moment from 'moment';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { DateAdapter } from '@angular/material/core';
 
 @Component({
@@ -23,13 +33,11 @@ export class ModalDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<ModalDialogComponent>,
     public dialogRefErrorOrSucess: MatDialog,
     private formBuilder: FormBuilder,
-    private dateAdapter: DateAdapter<Date>,
     @Inject(MAT_DIALOG_DATA) public editVehicle: any,
     private vehicleService: VehicleService
   ) {}
 
   ngOnInit() {
-    this.dateAdapter.setLocale('pt-br');
     this.vehicleForm = this.formBuilder.group({
       plate: ['', Validators.required],
       chassi: ['', Validators.required],
@@ -38,10 +46,10 @@ export class ModalDialogComponent implements OnInit {
       brand: ['', Validators.required],
       year: ['', Validators.required],
     });
-    this.editClient();
+    this.editInfo();
   }
 
-  editClient() {
+  editInfo() {
     if (this.editVehicle) {
       this.btnAction = 'Editar';
       this.vehicleForm.controls['plate'].setValue(this.editVehicle.plate);
@@ -72,7 +80,7 @@ export class ModalDialogComponent implements OnInit {
         });
       }
     } else {
-      this.updateClient();
+      this.updateInfo();
     }
   }
 
@@ -90,7 +98,7 @@ export class ModalDialogComponent implements OnInit {
     dialogRef.afterClosed();
   }
 
-  updateClient() {
+  updateInfo() {
     this.vehicleService
       .putVehicle(this.vehicleForm.value, this.editVehicle.id)
       .subscribe({

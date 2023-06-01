@@ -6,6 +6,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.mat-mdc-raised-button {
+  color: white !important;
+}
+
 .dialog-sucess-error {
   .mat-mdc-dialog-container,
   .mat-mdc-dialog-container .mdc-dialog__container,

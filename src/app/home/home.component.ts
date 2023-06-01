@@ -15,6 +15,7 @@ import { Vehicle } from 'src/shared/models/vehicle.interface';
 })
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = [
+    'id',
     'plate',
     'chassi',
     'renavam',
@@ -78,7 +79,7 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  searchClient(event: Event) {
+  searchVehicle(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
@@ -99,7 +100,7 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed();
   }
 
-  deleteClient(id: number) {
+  deleteVehicle(id: number) {
     this.vehicleService.deleteVehicle(id).subscribe({
       next: (res) => {
         this.openModalErrorOrSucess('delete');

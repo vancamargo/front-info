@@ -2,9 +2,9 @@
 @include mat-core();
 @import "./variables.scss";
 
-$primary: mat-palette($bank-primary, 300);
-$secondary: mat-palette($bank-secondary, 500);
-$tertiary: mat-palette($bank-secondary, 500);
+$primary: mat-palette($info-primary, 600, 400, 600);
+$secondary: mat-palette($info-secondary, 500);
+$tertiary: mat-palette($info-secondary, 500);
 
 $bv-theme: mat-light-theme($primary, $secondary, $tertiary);
 

@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { LogoInfoComponent } from './logo-info.component';
 
-describe('LogobankComponent', () => {
+describe('LogoinfoComponent', () => {
   let component: LogoInfoComponent;
   let fixture: ComponentFixture<LogoInfoComponent>;
 

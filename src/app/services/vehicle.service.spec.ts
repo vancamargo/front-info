@@ -47,20 +47,20 @@ describe('ApiService', () => {
     }
   ));
 
-  it('should post a client', () => {
+  it('should post a vehicle', () => {
     service.postVehicle(vehicles).subscribe((res) => {
       expect(res).toEqual(vehicles);
     });
 
     const req = httpTestingController.expectOne(
-      'http://localhost:3000/clientList'
+      'http://localhost:3000/vehicleList'
     );
     expect(req.request.method).toEqual('POST');
     req.flush(vehicles);
   });
 
-  it('should get clients', () => {
-    let clients: Vehicle[] = [
+  it('should get vehicles', () => {
+    let vehicles: Vehicle[] = [
       {
         plate: 'teste',
         chassi: 'novo',
@@ -71,17 +71,17 @@ describe('ApiService', () => {
       },
     ];
     service.getVehicle().subscribe((res) => {
-      expect(res).toEqual(clients);
+      expect(res).toEqual(vehicles);
     });
 
     const req = httpTestingController.expectOne(
-      'http://localhost:3000/clientList'
+      'http://localhost:3000/vehicleList'
     );
     expect(req.request.method).toEqual('GET');
-    req.flush(clients);
+    req.flush(vehicles);
   });
 
-  it('should put a client', () => {
+  it('should put a vehicle', () => {
     const id = 1;
 
     service.putVehicle(vehicles, id).subscribe((res) => {
@@ -89,19 +89,19 @@ describe('ApiService', () => {
     });
 
     const req = httpTestingController.expectOne(
-      'http://localhost:3000/clientList/1'
+      'http://localhost:3000/vehicleList/1'
     );
     expect(req.request.method).toEqual('PUT');
     req.flush(vehicles);
   });
 
-  it('should delete a client', () => {
+  it('should delete a vehicle', () => {
     const id = 1;
 
     service.deleteVehicle(id).subscribe((res) => {});
 
     const req = httpTestingController.expectOne(
-      'http://localhost:3000/clientList/1'
+      'http://localhost:3000/vehicleList/1'
     );
     expect(req.request.method).toEqual('DELETE');
     req.flush({});
